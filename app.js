@@ -4,7 +4,9 @@ var app = express();
 process.title = process.argv[2];
 
 var port = normalizePort(process.env.PORT || '3000');
-
+app.get('/cool', function (req, res) {
+  res.send('Even cooler.');
+});
 app.get('/', function (req, res) {
 		  res.send('FSE students are amazing! This is cool.');
 });
